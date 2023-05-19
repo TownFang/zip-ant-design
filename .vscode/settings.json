@@ -1,0 +1,6 @@
+{
+    "vue.inlayHints.optionsWrapper":false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+}
