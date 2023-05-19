@@ -2,7 +2,7 @@ Arguments:
   D:\Program Files\nodejs\node.exe C:\Users\fangziping\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
-  E:\win-os-projects\zip-ant-design\zip-ant-design\node_modules\.bin;E:\win-os-projects\zip-ant-design\node_modules\.bin;E:\win-os-projects\node_modules\.bin;E:\node_modules\.bin;D:\Program Files\nodejs;E:\jdk-17.0.6_windows-x64_bin\jdk-17.0.6\bin;E:\jdk-17.0.6_windows-x64_bin\jdk-17.0.6\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\fangziping\AppData\Local\Yarn\bin;D:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;D:\Python27;D:\Python27\Scripts;D:\BtSoft\panel\script;D:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Users\fangziping\AppData\Roaming\npm;D:\Program Files\nodejs\;E:\flutter_windows_2.8.1-stable\flutter\bin;D:\BtSoft\mysql\MySQL5.7\bin;;C:\Program Files\Docker\Docker\resources\bin;D:\Program Files\Go\bin;E:\TDM-GCC-64\bin;D:\Program Files\Redis\;D:\Python\Python38-32\Scripts\;D:\Python\Python38-32\;C:\Users\fangziping\AppData\Local\Microsoft\WindowsApps;d:\Users\fangziping\AppData\Local\Programs\Microsoft VS Code\bin;D:\Program Files\JetBrains\PyCharm 2020.2\bin;D:\apache-maven-3.6.1\bin;C:\Program Files\Go\bin;C:\Users\fangziping\go\bin
+  E:\win-os-projects\zip-ant-design\zip-ant-design\node_modules\.bin;E:\win-os-projects\zip-ant-design\node_modules\.bin;E:\win-os-projects\node_modules\.bin;E:\node_modules\.bin;D:\Program Files\nodejs;E:\jdk-17.0.6_windows-x64_bin\jdk-17.0.6\bin;E:\jdk-17.0.6_windows-x64_bin\jdk-17.0.6\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\fangziping\AppData\Local\Yarn\bin;C:\Program Files\TortoiseGit\bin;D:\Python27;D:\Python27\Scripts;D:\BtSoft\panel\script;D:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\Use;s\fangziping\AppData\Roaming\npm;D:\Program Files\nodejs\;E:\flutter_windows_2.8.1-stable\flutter\bin;D:\BtSoft\mysql\MySQL5.7\bin;C:\Program Files\Docker\Docker\resources\bin;D:\Program Files\Go\bin;E:\TDM-GCC-64\bin;D:\Program Files\Redis\;E:\Program Files\Git\cmd;D:\Python\Python38-32\Scripts\;D:\Python\Python38-32\;C:\Users\fangziping\AppData\Local\Microsoft\WindowsApps;d:\Users\fangziping\AppData\Local\Programs\Microsoft VS Code\bin;D:\Program Files\JetBrains\PyCharm 2020.2\bin;D:\apache-maven-3.6.1\bin;C:\Program Files\Go\bin;C:\Users\fangziping\AppData\Roaming\npm;C:\Users\fangziping\go\bin
 
 Yarn version: 
   1.22.10
@@ -29,11 +29,9 @@ npm manifest:
       "@vue/cli-plugin-babel": "~4.5.9",
       "@vue/cli-plugin-router": "~4.5.9",
       "@vue/cli-plugin-vuex": "~4.5.9",
-      "@vue/cli-service": "~4.5.9",
-      "@vue/cli-plugin-eslint": "~4.5.9"
-    },
-    "readme": "ERROR: No README data found!",
-    "_id": "zip-ant-design@0.1.0"
+      "@vue/cli-plugin-eslint": "~4.5.9",
+      "@vue/cli-service": "~4.5.9"
+    }
   }
 
 yarn manifest: 
