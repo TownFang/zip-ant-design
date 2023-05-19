@@ -27,3 +27,7 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+PS E:\win-os-projects\zip-ant-design> git config --global https.proxy https://127.0.0.1:33210
+PS E:\win-os-projects\zip-ant-design> git config --global http.proxy http://127.0.0.1:33210  
