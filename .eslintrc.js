@@ -15,6 +15,7 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "vue/multi-word-component-names": [
+      // 必须使用全驼峰名 两个单词的那种
       "error",
       {
         ignores: ["Login"], //需要忽略的组件名
