@@ -185,7 +185,7 @@ export default {
     }
   },
   methods: {
-    checkRules(values) {
+    checkRules(payload) {
       this.$nextTick(() => {
         this.isSuccess = true
         // 从上到下
@@ -201,17 +201,20 @@ export default {
             break
           }
         }
-        this.errorMsg = ''
-        const tableData = values.tableData.filter(item => item)
-        // console.log(form.getFieldError(`tableData.1.rate`))
-        for (const [keyItem, item] of tableData.entries()) {
+        // console.log(payload)
+        if (payload.tableData) {
+          this.errorMsg = ''
+          const tableData = values.tableData.filter(item => item)
+          // console.log(form.getFieldError(`tableData.1.rate`))
+          for (const [keyItem, item] of tableData.entries()) {
           // console.log(key, 'zip log')
-          for (const key in item) {
-            if (item[key] === undefined || item[key] === '' || form.getFieldError(`tableData.${keyItem}.${key}`) !== undefined) {
-            // console.log(key, index)
-              this.errorMsg = key
-              this.isSuccess = false
-              return
+            for (const key in item) {
+              if (item[key] === undefined || item[key] === '' || form.getFieldError(`tableData.${keyItem}.${key}`) !== undefined) {
+                // console.log(key, index)
+                this.errorMsg = key
+                this.isSuccess = false
+                return
+              }
             }
           }
         }
@@ -230,8 +233,8 @@ export default {
     // handler
     handleSubmit(e) {
       e.preventDefault()
-      this.form.validateFields((err, values) => {
-        this.checkRules()
+      this.form.validateFieldsAndScroll((err, values) => {
+        this.checkRules({ tableData: [] })
         if (!err) {
           // console.log('Received values of form: ', values)
         }
