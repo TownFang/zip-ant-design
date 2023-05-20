@@ -103,9 +103,7 @@
             </a-select>
           </a-form-item>
         </a-form-item>
-        <div class="ost-mt24">
-          <a-alert v-if="errorMsg" type="error" :message="errorMsg + ' is empty'" banner />
-        </div>
+
         <a-table class="ost-mt10 ost-mb24 my-table" :columns="columns" :data-source="data">
           <template #number="text,record,i">
             <span>
@@ -141,13 +139,20 @@
             <a-button @click="handleAdd">Add</a-button>
           </div>
         </a-table>
+
         <a-form-item :wrapper-col="{ span: 24 }" style="text-align: center">
           <a-button html-type="submit" type="primary">{{ $t('form.basic-form.form.submit') }}</a-button>
           <a-button style="margin-left: 8px">{{ $t('form.basic-form.form.save') }}</a-button>
         </a-form-item>
       </a-form>
+      <div class="ost-mt24">
+        <a-alert v-if="isSuccess" type="success" message="is Success" banner />
+      </div>
+      <div class="ost-mt24">
+        <a-alert v-if="errorMsg" type="error" :message="errorMsg + ' is empty'" banner />
+      </div>
     </a-card>
-    <span v-if="isSuccess">所有的校验都通过了</span>
+    <!-- <span v-if="isSuccess">所有的校验都通过了</span> -->
   </page-header-wrapper>
 </template>
 
@@ -202,12 +207,14 @@ export default {
           }
         }
         // console.log(payload)
-        if (payload.tableData) {
+        if (payload && payload.tableData) {
+          // console.log(payload.)
           this.errorMsg = ''
-          const tableData = values.tableData.filter(item => item)
+          const tableData = values.tableData
           // console.log(form.getFieldError(`tableData.1.rate`))
           for (const [keyItem, item] of tableData.entries()) {
           // console.log(key, 'zip log')
+            console.log('遍历' + keyItem)
             for (const key in item) {
               if (item[key] === undefined || item[key] === '' || form.getFieldError(`tableData.${keyItem}.${key}`) !== undefined) {
                 // console.log(key, index)
@@ -222,11 +229,11 @@ export default {
     },
     handleDelete(text, record) {
       this.data = this.data.filter(item => item.key !== record.key)
-      this.checkRules()
+      this.checkRules({ tableData: [] })
     },
     handleAdd(text, record) {
       this.data.push({ key: ++this.id })
-      this.checkRules()
+      this.checkRules({ tableData: [] })
     },
     handleParams() {},
     handleChange() {},
