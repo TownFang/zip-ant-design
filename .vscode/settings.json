@@ -1,7 +1,0 @@
-{
-    "vue.inlayHints.optionsWrapper":false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "files.eol": "\n" // 新建文件的默认值
-}
