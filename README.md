@@ -105,7 +105,7 @@ This project exists thanks to all the people who contribute.
 [https]
 	proxy = https://127.0.0.1:33210
 [user]
-	name = arrowfieldfzp
+	name = TownFang
 	email = 1573488953@qq.com
 [http]
 	proxy = http://127.0.0.1:33210
