@@ -106,3 +106,44 @@ ol {
     }
   }
 }
+
+
+each(range(50), {
+  .ost-m@{value} {
+    margin: (@value * 1px);
+  }
+  .ost-mt@{value} {
+    margin-top: (@value * 1px);
+  }
+  .ost-mb@{value} {
+    margin-bottom: (@value * 1px);
+  }
+  .ost-mr@{value} {
+    margin-right: (@value * 1px);
+  }
+  .ost-ml@{value} {
+    margin-left: (@value * 1px);
+  }
+  .ost-p@{value} {
+    padding: (@value * 1px);
+  }
+  .ost-mt@{value} {
+    padding-top: (@value * 1px);
+  }
+  .ost-mb@{value} {
+    padding-bottom: (@value * 1px);
+  }
+  .ost-mr@{value} {
+    padding-right: (@value * 1px);
+  }
+  .ost-ml@{value} {
+    padding-left: (@value * 1px);
+  }
+  .ost-f@{value}{
+    font-size:  (@value * 1px);
+  }
+});
+
+.ost-align-center{
+  text-align: center;
+}
