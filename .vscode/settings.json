@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript"
+    },
+    "emmet.includeLanguages": {
+        "wxml": "html"
+    },
+    "redhat.telemetry.enabled": true,
+    "minapp-vscode.disableAutoConfig": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": false,
+    // 以下是手动加的
+    "files.eol": "\n",
+    "vue.inlayHints.optionsWrapper":false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false,
+    // end
+}
