@@ -110,7 +110,7 @@ This project exists thanks to all the people who contribute.
 [http]
 	proxy = http://127.0.0.1:33210
 [credential]
-	helper = store
+	  helper = store
 
 
 > git commit  --no-verify -m  "fix: bug"

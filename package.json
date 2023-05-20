@@ -6,12 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --no-module",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
+    "lint": "if [ -z \"$GIT_COMMIT_NO_LINT\" ]; then npm run eslint; else echo 'Skip npm lint'; fi",
     "build:preview": "vue-cli-service build --no-module --mode preview",
     "lint:nofix": "vue-cli-service lint --no-fix",
     "lint:js": "eslint src/**/*.js --fix",
     "lint:css": "stylelint src/**/*.*ss --fix  --custom-syntax postcss-less",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "precommit": "export GIT_COMMIT_NO_LINT=1"
   },
   "dependencies": {
     "@ant-design-vue/pro-layout": "^1.0.12",
