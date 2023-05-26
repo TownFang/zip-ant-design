@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --no-module",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "if [ -z \"$GIT_COMMIT_NO_LINT\" ]; then npm run eslint; else echo 'Skip npm lint'; fi",
+    "lint": "eslint --fix --ext .js,.vue ./",
     "build:preview": "vue-cli-service build --no-module --mode preview",
     "lint:nofix": "vue-cli-service lint --no-fix",
     "lint:js": "eslint src/**/*.js --fix",
@@ -86,13 +86,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
   }
 }

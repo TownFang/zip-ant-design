@@ -2,7 +2,7 @@
   <page-header-wrapper class="vat-calc" :title="false" :content="$t('form.basic-form.basic.description')">
     <span v-if="isSuccess">所有的校验都通过了</span>
     <a-card :body-style="{ padding: '24px 32px' }" :bordered="false">
-      <a-form :form="form" :model="dynamicValidateForm" @submit="handleSubmit">
+      <a-form :form="form" @submit="handleSubmit">
         <a-form-item
           :label="$t('form.basic-form.title.label')"
           :label-col="{ lg: { span: 7 }, sm: { span: 7 } }"
@@ -104,7 +104,7 @@
           </a-form-item>
         </a-form-item>
 
-        <a-table class="ost-mt10 ost-mb24 my-table" :columns="columns" :data-source="dynamicValidateForm.tableData">
+        <a-table class="ost-mt10 ost-mb24 my-table" :columns="columns" :data-source="data">
           <template #number="text,record,i">
             <span>
               {{ i+1 }}
@@ -112,7 +112,7 @@
           </template>
           <template #value="text,record,i">
             <a-form-item label="">
-              <a-input v-model="record.value" v-decorator="[`tableData.${record.key}.value`, { rules: [{ required: true, message: $t('form.basic-form.goal.required') }, { pattern: new RegExp('^[^\u4e00-\u9fa5]*$'), message: '不能输入中文' },] }]" @change="handleParams(text,record,i)" />
+              <a-input v-decorator="[`tableData.${record.key}.value`, { rules: [{ required: true, message: $t('form.basic-form.goal.required') }, { pattern: new RegExp('^[^\u4e00-\u9fa5]*$'), message: '不能输入中文' },] }]" @change="handleParams(text,record,i)" />
             </a-form-item>
           </template>
           <template #rate="text,record,i">
@@ -163,9 +163,6 @@ export default {
   data() {
     const _that = this
     return {
-      dynamicValidateForm: {
-        tableData: []
-      },
       columns: [
         { title: 'NO.', scopedSlots: { customRender: 'number' }},
         { title: 'Value', scopedSlots: { customRender: 'value' }},
